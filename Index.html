@@ -3,69 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blazas — Coming Soon</title>
+  <title>Blazas – Coming Soon</title>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
     body {
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
-      padding: 20px;
     }
     h1 {
-      font-size: 3.5rem;
-      color: #ffb100;
-      letter-spacing: 2px;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
     p {
       font-size: 1.2rem;
-      margin: 20px 0;
-      color: #ccc;
+      margin-bottom: 30px;
     }
-    .glow {
-      color: #ff6c00;
-      text-shadow: 0 0 10px #ff6c00, 0 0 20px #ff6c00;
-    }
-    .socials {
-      margin-top: 20px;
-    }
-    .socials a {
-      color: #ffb100;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: transform 0.2s;
-    }
-    .socials a:hover {
-      transform: scale(1.2);
-    }
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.8rem;
-      color: #555;
+    .countdown {
+      font-size: 1.1rem;
+      color: #0ff;
     }
   </style>
 </head>
 <body>
-  <h1 class="glow">Blazas</h1>
-  <p>Your Future Hub of Innovation, Products & Powerful Ideas.</p>
-  <p><strong>We're launching soon. Stay tuned!</strong></p>
+  <h1>Blazas</h1>
+  <p>Something powerful is coming soon. Stay tuned.</p>
+  <div id="countdown" class="countdown"></div>
 
-  <div class="socials">
-    <a href="#" title="Instagram">📸</a>
-    <a href="#" title="Twitter">🐦</a>
-    <a href="#" title="YouTube">▶️</a>
-  </div>
-
-  <div class="footer">© 2025 Blazas. All rights reserved.</div>
+  <script>
+    const launchDate = new Date("2025-12-01T00:00:00").getTime();
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+      if (diff <= 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerText = "We're Live!";
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").innerText = 
+        `Launching in ${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+  </script>
 </body>
 </html>
