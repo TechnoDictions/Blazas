@@ -19,9 +19,19 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
       text-align: center;
       padding: 50px;
+       animation: colorShift 10s ease-in-out infinite;
+      transition: background-color 2s ease-in-out;
+    }
+    
+    @keyframes colorShift {
+      0%   { background-color: #d7d4d4; }   /* red */
+      20%  { background-color: #103991; }   /* blue */
+      40%  { background-color: #4dff88; }   /* green */
+      60%  { background-color: #c9fc2f; }   /* yellow */
+      80% { background-color: #ff4dea; }   /* back to red */
+      100%{ background-color: #d7d4d4;}
     }
     h1 {
       font-size: 80px;
