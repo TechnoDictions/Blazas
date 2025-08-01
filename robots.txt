@@ -16,6 +16,7 @@ Disallow: /*.pdf$
 Disallow: /*.zip$
 Disallow: /*?sessionid=
 Disallow: /*?ref=
+Crawl-delay: 10
 
 # Prevent image indexing by Google Images
 User-agent: Googlebot-Image
@@ -30,13 +31,12 @@ Disallow: /cart/
 User-agent: Yandex
 Disallow: /private/
 
-# Allow specific bots like Googlebot and Bingbot to index everything
+# Allow Googlebot and Bingbot full access
 User-agent: Googlebot
 Disallow:
 
 User-agent: Bingbot
 Disallow:
 
-# Crawl-delay
-User-agent: *
-Crawl-delay: 10
+# Sitemap
+Sitemap: https://www.blazas.com/sitemap.xml
