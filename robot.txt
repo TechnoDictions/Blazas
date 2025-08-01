@@ -1,0 +1,42 @@
+# Allow all search engines to crawl the main site
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /test/
+Disallow: /drafts/
+Disallow: /backup/
+Disallow: /error/
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*?sessionid=
+Disallow: /*?ref=
+
+# Prevent image indexing by Google Images
+User-agent: Googlebot-Image
+Disallow: /
+
+# Prevent AdsBot from accessing cart/checkout pages
+User-agent: AdsBot-Google
+Disallow: /checkout/
+Disallow: /cart/
+
+# Prevent Yandex from accessing private content
+User-agent: Yandex
+Disallow: /private/
+
+# Allow specific bots like Googlebot and Bingbot to index everything
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+# Crawl-delay
+User-agent: *
+Crawl-delay: 10
