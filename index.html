@@ -89,14 +89,21 @@
       border-radius: 50%;
       background:rgba(64, 255, 0, 0.884);
       transform: translate(-50%, -50%) scale(1);
-      animation: pulse 1.5s ease-out infinite;
+      animation: pulse 1.5s ease-out infinite, colorShift1 10s 2s ease-in-out infinite;
     }
 
     /* Second ring with delay for continuous pulse */
     .ring:nth-child(2) {
       animation-delay: .6s;
     }
-
+ @keyframes colorShift1 {
+      0%   { background: #d7d4d4; }   /* red */
+      20%  { background: #103991; }   /* blue */
+      40%  { background: #4dff88; }   /* green */
+      60%  { background: #c9fc2f; }   /* yellow */
+      80% { background: #ff4dea; }   /* back to red */
+      100%{ background: #d7d4d4;}
+    }
     @keyframes pulse {
       0% {
         transform: translate(-50%, -50%) scale(1);
@@ -130,6 +137,7 @@
   </script>
 </body>
 </html>
+
 
 
 
