@@ -59,6 +59,59 @@
       background-color: #fff;
       border-color: #000;
     }
+    .pulse-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Solid center dot */
+    .center {
+      width: 20px;
+      height: 20px;
+      background: #4fc3f7;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    /* Expanding rings */
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(13, 168, 240, 0.5);
+      transform: translate(-50%, -50%) scale(1);
+      animation: pulse 1.5s ease-out infinite;
+    }
+
+    /* Second ring with delay for continuous pulse */
+    .ring:nth-child(2) {
+      animation-delay: .6s;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      25% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity:1 ;}
+        50% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity:1.1 ;}
+      100% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,7 +119,11 @@
   <h1>Blazas</h1>
   <p>Welcome to Blazas — a growing hub of technology, ideas, and creative web tools. We're currently building new projects to launch soon. Stay tuned!</p>
   <!--<button class="button" onclick="changeColor()">Click to change background color</button>-->
-
+<div class="pulse-container">
+    <div class="center"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
   <script src="script.js">
     
   </script>
