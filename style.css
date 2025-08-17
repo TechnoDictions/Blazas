@@ -176,9 +176,9 @@ Mian
   align-items: center;
   font-size: px;
   position: absolute;
-  bottom: 5vh;
+  bottom: 1vh;
   left: 50%;
-  box-shadow: rgba(93, 93, 93, 0.176) 5px 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.957);
   transform: translate(-50%);
   z-index: 10;
   border: none;
@@ -198,11 +198,12 @@ Mian
   */
 .products-section {
   width: 85vw;
-  margin: 5vh auto;
+  margin: 8vh auto;
 }
 
 .products-heading {
   font-size: 39px;
+  text-align: center;
 }
 
 .products-container {
@@ -243,6 +244,7 @@ Mian
 
 .products-container-parent {
   position: relative;
+  margin: 4vh 0;
 }
 
 .btn-cards {
@@ -271,4 +273,37 @@ Mian
 .btn-cards:hover {
   background-color: rgba(0, 0, 0, 0.703);
   transform: scale(1.2) translateY(-40%);
+}
+
+/*
+================
+Main Products
+================
+*/
+.main-product-section{
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+.product{
+background-color: aqua;
+height: 80vh;
+width: 100vw;
+display: flex;
+
+}
+.product-image{
+background-color: beige;
+height: 100%;
+width: 50%;
+}
+.product-image img{
+  object-position: center center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.product-info{
+background-color: blue;
+height: 100%;
+width: 50%;
 }
