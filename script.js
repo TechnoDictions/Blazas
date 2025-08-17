@@ -58,4 +58,74 @@ Slider script
   }
 
   startAutoSlide();
+/*
+=========
+scroll-btn
+=========
+*/
 
+document.getElementById("btn-scroll").addEventListener("click", function() {
+    const target = document.querySelector(".products-section").offsetTop; // position of target
+    const start = window.scrollY; // starting scroll position
+    const distance = target - (start+100); // how far to scroll
+    const duration = 800; // time in ms (2 seconds)
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, start, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Easing function for smooth effect
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+});
+/*
+=============
+Dynamic Cards
+=============
+*/
+
+function DynamicCards(img){
+  let html=`<div class="cards"><img src="${img}" alt=""></div>`
+  document.querySelector(".products-cards").innerHTML+=html
+}
+DynamicCards("img/Bracelets/b1.jpg")
+DynamicCards("img/Bracelets/b2.jpg")
+DynamicCards("img/Bracelets/b3.jpg")
+DynamicCards("img/Bracelets/b4.jpg")
+DynamicCards("img/Bracelets/b5.jpg")
+DynamicCards("img/Bracelets/b6.jpg")
+DynamicCards("img/Bracelets/b7.jpg")
+DynamicCards("img/Bracelets/b8.jpg")
+
+
+function scrollRight(){
+const scroll_x = document.querySelector(".products-container")
+if(scroll_x){
+  scroll_x.scrollBy({
+    left:-340,
+    behavior:"smooth"
+  });
+  
+}
+}
+function scrollleft(){
+const scroll_y = document.querySelector(".products-container")
+if(scroll_y){
+  scroll_y.scrollBy({
+    left:340,
+    behavior:"smooth"
+  });
+  
+}
+}
