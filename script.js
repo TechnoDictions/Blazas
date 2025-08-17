@@ -95,20 +95,35 @@ Dynamic Cards
 =============
 */
 
-function DynamicCards(img){
-  let html=`<div class="cards"><img src="${img}" alt=""></div>`
+function DynamicCards(img,alt){
+  let html=`<div class="cards"><img src="${img}" alt="${alt}"></div>`
   document.querySelector(".products-cards").innerHTML+=html
 }
-DynamicCards("img/Bracelets/b1.jpg")
-DynamicCards("img/Bracelets/b2.jpg")
-DynamicCards("img/Bracelets/b3.jpg")
-DynamicCards("img/Bracelets/b4.jpg")
-DynamicCards("img/Bracelets/b5.jpg")
-DynamicCards("img/Bracelets/b6.jpg")
-DynamicCards("img/Bracelets/b7.jpg")
-DynamicCards("img/Bracelets/b8.jpg")
+DynamicCards("img/Bracelets/b1.jpg" , "Bracelet beads with charms")
+DynamicCards("img/Bracelets/b2.jpg" , "Bracelet beads with charms")
+DynamicCards("img/Bracelets/b3.jpg" , "Bracelet beads with charms")
+DynamicCards("img/Bracelets/b4.jpg" , "Bracelet beads with charms")
 
 
+/*
+================
+Dynamic Cards 2
+================
+*/
+function DynamicCards2(img,alt){
+  let html=`<div class="cards"><img src="${img}" alt="${alt}"></div>`
+  document.querySelector(".products-cards-2").innerHTML+=html
+}
+DynamicCards2("img/Bracelets/b5.jpg" , "Bracelet beads with charms")
+DynamicCards2("img/Bracelets/b6.jpg" , "Bracelet beads with charms")
+DynamicCards2("img/Bracelets/b7.jpg" , "Bracelet beads with charms")
+DynamicCards2("img/Bracelets/b8.jpg" , "Bracelet beads with charms")
+
+/*
+=========================
+For scrolling of products
+=========================
+*/
 function scrollRight(){
 const scroll_x = document.querySelector(".products-container")
 if(scroll_x){
@@ -126,6 +141,33 @@ if(scroll_y){
     left:340,
     behavior:"smooth"
   });
+  
+  
+}
+}
+/*
+=============================
+For scrolling of products 2
+=============================
+*/
+function scrollRight2(){
+const scroll_x = document.querySelector(".products-container-2")
+if(scroll_x){
+  scroll_x.scrollBy({
+    left:-340,
+    behavior:"smooth"
+  });
+  
+}
+}
+function scrollleft2(){
+const scroll_y = document.querySelector(".products-container-2")
+if(scroll_y){
+  scroll_y.scrollBy({
+    left:340,
+    behavior:"smooth"
+  });
+  
   
 }
 }
