@@ -3,6 +3,14 @@
   padding: 0;
   font-family: ubuntu;
 }
+/*
+=======
+ROOT
+=======
+*/
+:root{
+   --button-color:rgba(0, 0, 0, 0.732);
+}
 
 /*
             ======
@@ -121,6 +129,7 @@ Mian
   background: rgba(0, 0, 0, 0.3);
   /* slight black */
   z-index: 2;
+  pointer-events: none;
 }
 
 .slide {
@@ -280,30 +289,117 @@ Mian
 Main Products
 ================
 */
-.main-product-section{
-    background-color: antiquewhite;
-    overflow: hidden;
+.main-product-section {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.314);
 }
-.product{
-background-color: aqua;
-height: 80vh;
-width: 100vw;
-display: flex;
+
+.product {
+  background-color: rgba(183, 183, 183, 0.491);
+  height: 80vh;
+  width: 100vw;
+  display: flex;
 
 }
-.product-image{
-background-color: beige;
-height: 100%;
-width: 50%;
+
+.product-image {
+  width: 50%;
 }
-.product-image img{
+
+.product-image img {
   object-position: center center;
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.product-info{
-background-color: blue;
-height: 100%;
-width: 50%;
+
+.product-info {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info-div {
+  height: 60%;
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-info-h {
+  font-size: 25px;
+  padding: 10px 10px;
+}
+
+.product-info-p {
+  padding: 10px 10px;
+}
+.product-info-shop{
+  margin: 10px 10px;
+}
+.product-info button {
+  padding: 10px 10px;
+  overflow: hidden;
+  font-weight: 700;
+  position: relative;
+  display: block;
+  border: 3px solid var(--button-color);
+  color: var(--button-color);
+  transition: all .5s ease-in-out;
+
+}
+
+.product-info button span {
+  position: relative;
+  z-index: 2;
+}
+
+.product-info button::before {
+  content: "";
+  height: 100%;
+  width: 150%;
+  top: 0;
+  left: -170%;
+  transform: skewX(45deg);
+  position: absolute;
+  background-color: var(--button-color);
+  transition: all .5s ease-in-out;
+  
+}
+
+.product-info button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.product-info button:hover::before {
+  z-index: 1;
+  left: -30%;
+}
+/*
+===========
+JOIn reason
+===========
+*/
+.join-reason-section{
+  margin-top: 30px;
+}
+.join-reason{
+  height: 40vh;
+  width: 80vw;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.323);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reason{
+  height: 90%;
+  width: 20%;
+  background-color: aquamarine;
 }
