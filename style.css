@@ -16,9 +16,9 @@ ROOT
 }
 
 /*
-            ======
-            Header
-            ======
+ ======
+ Header
+ ======
 */
 
 .header {
@@ -27,11 +27,6 @@ ROOT
   width: 100vw;
   position: fixed;
   z-index: 100;
-}
-
-.header-top {
-
-  color: white;
 }
 
 .logo-section {
@@ -185,7 +180,6 @@ Mian
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: px;
   position: absolute;
   bottom: 1vh;
   left: 50%;
@@ -195,6 +189,11 @@ Mian
   border: none;
   border-radius: 50%;
   transition: all .3s ease;
+}
+
+#btn-scroll svg {
+  height: 100%;
+  width: 100%;
 }
 
 #btn-scroll:hover {
@@ -372,7 +371,7 @@ Main Products
   transform: skewX(45deg);
   position: absolute;
   background-color: var(--button-color);
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 
 }
 
@@ -454,12 +453,14 @@ Category
   text-align: center;
   font-size: 39px;
 }
-.category-parent{
-  background-color: rgba(233, 233, 233, 0.553);
+
+.category-parent {
+  background: linear-gradient(190deg, #ffffff, #c6c6c6);
   border: 2px solid rgba(216, 216, 216, 0.658);
   border-radius: 10px;
   padding: 30px;
 }
+
 .category {
   height: 90%;
   width: 90%;
@@ -489,11 +490,62 @@ Category
   width: 12vw;
   overflow: hidden;
   border-radius: 50%;
-  
+
 }
+
 .product-category-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center center;
 }
+
+/*
+==========
+Contact us
+==========
+*/
+.contact-div {
+  width: 70vw;
+  overflow: hidden;
+  border: 2px solid rgba(139, 139, 139, 0.59);
+  border-radius: 15px;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(120deg, #ffffff, #8e8e8e);
+}
+.contact-h
+{
+  font-size: 45px;
+  margin: 30px;
+}
+.contact-details{
+margin: 40px 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 2vw;
+row-gap: 20px;
+
+}
+.contacts{
+  display: flex;
+  align-items: center;
+}
+
+.contact-svg i{
+  font-size: 45px;
+}
+.contact-svg svg{
+  height: 45px;
+  width: 45px;
+}
+.contact-s{
+  padding: 5px;
+  font-size: 20px;
+}
+
+.footer {}
