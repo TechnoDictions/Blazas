@@ -68,7 +68,7 @@ document.getElementById("btn-scroll").addEventListener("click", function() {
     const target = document.querySelector(".products-section").offsetTop; // position of target
     const start = window.scrollY; // starting scroll position
     const distance = target - (start+100); // how far to scroll
-    const duration = 800; // time in ms (2 seconds)
+    const duration = 1300; // time in ms (2 seconds)
     let startTime = null;
 
     function animation(currentTime) {
@@ -96,7 +96,7 @@ Dynamic Cards
 */
 
 function DynamicCards(img,alt){
-  let html=`<div class="cards"><img src="${img}" alt="${alt}"></div>`
+  let html=`<div class="cards"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards").innerHTML+=html
 }
 DynamicCards("img/Bracelets/b1.jpg" , "Bracelet beads with charms")
@@ -111,7 +111,7 @@ Dynamic Cards 2
 ================
 */
 function DynamicCards2(img,alt){
-  let html=`<div class="cards"><img src="${img}" alt="${alt}"></div>`
+  let html=`<div class="cards"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards-2").innerHTML+=html
 }
 DynamicCards2("img/Bracelets/b5.jpg" , "Bracelet beads with charms")
