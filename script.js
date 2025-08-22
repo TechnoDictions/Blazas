@@ -96,7 +96,7 @@ Dynamic Cards
 */
 
 function DynamicCards(img,alt){
-  let html=`<div class="cards"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
+  let html=`<div class="cards"  data-aos="fade-up" ata-aos-anchor-placement="bottom-bottom"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards").innerHTML+=html
 }
 DynamicCards("img/Bracelets/b1.jpg" , "Bracelet beads with charms")
@@ -111,7 +111,7 @@ Dynamic Cards 2
 ================
 */
 function DynamicCards2(img,alt){
-  let html=`<div class="cards"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
+  let html=`<div class="cards"   data-aos="fade-up"   data-aos-anchor-placement="bottom-bottom"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards-2").innerHTML+=html
 }
 DynamicCards2("img/Bracelets/b5.jpg" , "Bracelet beads with charms")
@@ -171,3 +171,8 @@ if(scroll_y){
   
 }
 }
+/*
+==========
+On display reveal
+==========
+*/
