@@ -36,7 +36,7 @@
       </div>
       <div class="logo"><a href="https://www.blazas.com"><img src="img/logo.svg" alt="Blazas Logo" srcset=""></a></div>
       <div class="icons">
-        <div class="icon-set">
+        <div class="icon-set icon-set1">
           <a href="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
               <path
@@ -44,7 +44,7 @@
             </svg>
           </a>
         </div>
-        <div class="icon-set">
+        <div class="icon-set icon-set2">
           <a href="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
               <path
@@ -52,7 +52,7 @@
             </svg>
           </a>
         </div>
-        <div class="icon-set">
+        <div class="icon-set icon-set3">
           <a href="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
               <path
@@ -68,7 +68,15 @@
         <li class="nav-links"><a href="">Blogs</a></li>
         <li class="nav-links"><a href="">Shop</a></li>
         <li class="nav-links"><a href="">Contact us</a></li>
-        <li class="nav-links"><a href="">Products</a></li>
+        <li class="nav-links"><a href="">Products</a>
+          <ul class="ul2">
+            <li><a href="https://www.blazas.com">Laptops</a></li>
+            <li><a href="">Mobile</a></li>
+            <li><a href="">Fashion</a></li>
+            <li><a href="">Bracelets</a></li>
+          </ul>
+        </li>
+        <li class="nav-links"><a href="">Category</a></li>
       </ul>
     </nav>
   </header>
@@ -93,7 +101,7 @@
 
       <button class="btn left">&#10094;</button>
       <button class="btn right">&#10095;</button>
-      <button id="btn-scroll"><img src="img/Icons svgs/Arrow-down.svg" alt=""></button>
+      <button id="btn-scroll" aria-label="Scroll button"><img src="img/Icons svgs/Arrow-down.svg" alt=""></button>
     </div>
   </main>
   <!--
@@ -162,22 +170,27 @@
 
     </div>
   </section>
+  <!--
+  ===========
+  join-reason
+  ===========
+  -->
   <section class="join-reason-section">
     <div class="join-reason" data-aos="fade-up" data-aos-duration="800">
-      <div class="reason reason1">
+      <div class="reason reason1" data-aos-duration="1500">
         <div class="join-reason-svg"><img src="img/Icons svgs/Whatsap support.svg" alt=""></div>
         <div class="join-reason-p">Whatsapp Support</div>
       </div>
-      <div class="reason reason2">
+      <div class="reason reason2" data-aos-duration="1500">
         <div class="join-reason-svg"><img src="img/Icons svgs/Low price.svg" alt=""></div>
         <div class="join-reason-p">Affordable Price</div>
       </div>
-      <div class="reason reason3">
+      <div class="reason reason3" data-aos-duration="1500">
         <div class="join-reason-svg"><img src="img/Icons svgs/guarantee.svg" alt="">
         </div>
         <div class="join-reason-p">100% Gurantee</div>
       </div>
-      <div class="reason reason4">
+      <div class="reason reason4" data-aos-duration="1500">
         <div class="join-reason-svg"><img src="img/Icons svgs/Customization.svg" alt=""></div>
         <div class="join-reason-p">Custom Designs</div>
       </div>
@@ -214,7 +227,7 @@
           </Div>
           <Div class="product-category-name">jewlery</Div>
         </div>
-        <div class="product-category category5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="product-category category5" data-aos="fade-up">
           <Div class="product-category-img"></Div>
           <Div class="product-category-name">Clothes</Div>
         </div>
@@ -294,8 +307,6 @@
   <script src="assets/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1200, // animation duration
-      once: true      // animation happens only once
     });
   </script>
 </body>
