@@ -28,6 +28,7 @@ ROOT
   width: 100vw;
   position: fixed;
   z-index: 100;
+  box-shadow: 0px 0px 7px #777777a9;
 }
 
 .logo-section {
@@ -576,6 +577,14 @@ Main Products
 
 }
 
+.product-info2 {
+  order: 1;
+}
+
+.product-image2 {
+  order: 2;
+}
+
 .product-info button span {
   position: relative;
   z-index: 2;
@@ -613,11 +622,9 @@ JOIn reason
 }
 
 .join-reason {
-  height: 25vh;
   width: 90vw;
   box-shadow: var(--shadow);
   border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.323);
   margin: auto;
   display: flex;
   align-items: center;
@@ -628,6 +635,7 @@ JOIn reason
 .reason {
   height: 90%;
   width: 22%;
+  padding: 20px 20px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -653,7 +661,7 @@ JOIn reason
   align-items: center;
   justify-content: center;
   font-family: comfortaa;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 900;
   text-align: center;
 }
@@ -780,3 +788,54 @@ Contact us
 Media Screen
 =============
 */
+@media(max-width:750px) {
+  .main {
+    height: 45vh;
+  }
+
+  .main-h {
+    font-size: 40px;
+  }
+
+  #btn-scroll {
+    display: none;
+  }
+
+  .products-container {
+    height: 30vh;
+  }
+
+  .cards {
+    width: 40vw;
+  }
+
+  .product {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .product-image {
+    width: 100%;
+
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info2 {
+    order: 2;
+  }
+
+  .product-image2 {
+    order: 1;
+  }
+
+  .join-reason {
+    flex-wrap: wrap;
+  }
+
+  .reason {
+    flex: 1 1 45%;
+  }
+}
