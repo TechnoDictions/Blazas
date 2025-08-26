@@ -1,4 +1,19 @@
+/*
+===========
+menu-sidebar
+===========
+*/
+let menuDiv = document.querySelector(".menu-sidebar");
 
+document.querySelector(".menu-btn").addEventListener("click", function() {
+  menuDiv.classList.toggle("active")
+});
+
+let menuBtn = document.querySelector(".menu-btn");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+});
 /*
 ========
 spacer
