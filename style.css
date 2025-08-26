@@ -511,6 +511,40 @@ Mian
 }
 
 /*
+==========
+Milestones
+==========
+  */
+.stats-section {
+  max-width: 95vw;
+  margin: 40px auto;
+  padding: 20px 10px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat {
+  text-align: center;
+  padding: 14px 8px;
+}
+
+.stat .stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #008cff;
+  line-height: 1.1;
+}
+
+.stat .label {
+  margin-top: 6px;
+  color: #555;
+}
+
+/*
 ================
 Main Products
 ================
@@ -760,12 +794,14 @@ Contact us
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
-.contact-main h2{
+
+.contact-main h2 {
   font-size: 50px;
   font-weight: 500;
   text-align: center;
   padding: 40px 40px;
 }
+
 .form-sec1 {
   display: grid;
   gap: 40px 30px;
@@ -774,19 +810,23 @@ Contact us
   grid-template-columns: 1fr 1fr;
   margin: 10px auto;
 }
-.form-sec2{
+
+.form-sec2 {
   margin: 10px auto;
   padding: 20px 20px;
 }
+
 .input-group {
   position: relative;
   margin: 20px 0;
   width: 280px;
 }
-.input-group4{
+
+.input-group4 {
   width: 90%;
   padding: 20px 20px;
 }
+
 .input-field {
   width: 100%;
   padding: 10px 5px;
@@ -866,7 +906,8 @@ Contact us
 .radio-wrapper input:checked+.custom-radio::after {
   display: block;
 }
-.form-sec3{
+
+.form-sec3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -901,16 +942,73 @@ Contact us
 
 .form-sec3 button:hover {
   color: #ffffff;
-  box-shadow: 0 0 5px rgb(88, 88, 244), 0 0 10px rgb(72, 72, 207), 0 0 15px rgb(22, 22, 255);
+  box-shadow: 0 0 8px rgb(3, 3, 255), 0 0 16px rgb(72, 72, 207), 0 0 24px rgb(22, 22, 255);
 }
 
 .form-sec3 span {
   position: relative;
   z-index: 10;
 }
+
 .form-sec3 button:hover::before {
   left: -25%;
 }
+
+/*
+==============
+Contact-info
+=============
+*/
+.contact-info {
+  width: auto;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  display: flex;
+  background: linear-gradient(180deg, rgb(26, 18, 48), rgb(45, 40, 79));
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact-info h2 {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  font-size: 20px;
+}
+
+.contacts i {
+  padding: 10px 10px;
+  font-size: 33px;
+  color: #2e8eff;
+  text-align: center;
+}
+
+.contact-links {
+  font-size: 30px;
+  display: flex;
+  margin: 20px auto;
+  gap: 30px 30px;
+}
+
+.contact-links a {}
+
 /*
 ======
 Footer
@@ -920,7 +1018,7 @@ Footer
 footer {
   background: linear-gradient(180deg, rgb(8, 1, 36), rgb(33, 28, 56));
   box-shadow: 0 0 15px rgb(113, 113, 113);
-  margin-top: 70px;
+  margin-top: 40px;
   color: rgb(255, 255, 255);
 }
 
@@ -1094,20 +1192,24 @@ Media Screen
   .footer-links h3 {
     font-size: 17px;
   }
-  .form-sec1{
+
+  .form-sec1 {
     grid-template-columns: 1fr;
   }
-  .contact-main h2{
-  font-size: 30px;
-  font-weight: 300;
-  padding: 20px 20px;
-}
-.contact-form{
-  width: 90vw;
-}
-.input-group{
-  width: 95%;
-}
+
+  .contact-main h2 {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 20px 20px;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .input-group {
+    width: 95%;
+  }
 }
 
 @media(max-width:450px) {
@@ -1115,14 +1217,19 @@ Media Screen
   .footer-section2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
   }
-  .main-h h1{
+
+  .form-sec1 {
+    gap: 10px 5px;
+  }
+
+  .main-h h1 {
     font-size: 20px;
   }
+
   .shop-by-category {
-  width: 92vw;
-}
+    width: 92vw;
+  }
 }
 
 @media(max-width:750px) {
