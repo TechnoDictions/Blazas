@@ -32,7 +32,7 @@ ROOT
   height: auto;
   width: 100vw;
   position: fixed;
-  z-index: 100;
+  z-index: 9999;
   box-shadow: 0px 0px 7px #777777a9;
 }
 
@@ -83,18 +83,30 @@ ROOT
   position: absolute;
   display: none;
   left: 20px;
+  height: 35px;
+  width: 30px;
+  transition: all 1s linear;
 }
 
 .menu-btn span {
-  height: 3.5px;
-  width: 28px;
+  height: 10%;
+  width: 100%;
   display: block;
-  margin: 5.5px auto;
+  margin: 22% auto;
   border-radius: 2px;
-  transition: all .3s ease;
+  transition: all .4s ease;
   background-color: #171717;
 }
 
+.menu-btn.active .span2 {
+  height: 0.01px;
+}
+.menu-btn.active .span1 {
+  transform: rotate(405deg) translateY(11px);
+}
+.menu-btn.active .span3 {
+  transform: rotate(-405deg) translateY(-11px);
+}
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -210,7 +222,24 @@ nav ul li:hover ul li:nth-child(6) {
 nav ul li:hover ul li:nth-child(7) {
   transition-delay: 0.7s;
 }
-
+/*
+===========
+Nav sidebar
+===========
+*/
+.menu-sidebar{
+  position: absolute;
+  left: -102%;
+  z-index: 1000;
+  height: 100vh;
+  width: 70vw;
+  visibility: hidden;
+  background-color: white;
+  transition: all .6s ease;
+}
+.menu-sidebar.active{
+  left: 0;
+}
 /*
 ==========
 Nav media
@@ -232,7 +261,9 @@ Nav media
   .menu-btn {
     display: block;
   }
-
+   .menu-sidebar{
+    visibility: visible;
+   }
   nav {
     display: none;
   }
@@ -248,9 +279,7 @@ Nav media
   }
 
   .menu-btn span {
-    height: 2.5px;
-    width: 22px;
-    margin: 4.7px 0;
+   
   }
 
   .icon-set1 {
