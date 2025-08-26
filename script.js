@@ -96,7 +96,7 @@ Dynamic Cards
 */
 
 function DynamicCards(img,alt){
-  let html=`<div class="cards"  data-aos="fade-up" ata-aos-anchor-placement="bottom-bottom"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
+  let html=`<div class="cards"  data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards").innerHTML+=html
 }
 DynamicCards("img/Bracelets/b1.jpg" , "Bracelet beads with charms")
@@ -111,7 +111,7 @@ Dynamic Cards 2
 ================
 */
 function DynamicCards2(img,alt){
-  let html=`<div class="cards"   data-aos="fade-up"   data-aos-anchor-placement="bottom-bottom"> <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
+  let html=`<div class="cards"   data-aos="fade-right" data-aos-duration="1400" data-aos-anchor-placement="top-bottom" > <div class="loader"></div><img src="${img}" alt="${alt}" onload="this.style.display='block'; this.previousElementSibling.style.display='none';"></div>`
   document.querySelector(".products-cards-2").innerHTML+=html
 }
 DynamicCards2("img/Bracelets/b5.jpg" , "Bracelet beads with charms")
@@ -172,7 +172,52 @@ if(scroll_y){
 }
 }
 /*
-==========
-On display reveal
-==========
+=============
+for Milestone
+=============
 */
+   function countTo(el, target, { duration = 2000, suffix = "" } = {}) {
+      let start = null;
+      const fmt = new Intl.NumberFormat(); // adds 1,000 separators
+
+      function step(ts) {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1); // 0..1
+        const current = Math.round(p * target);
+        el.textContent = fmt.format(current) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function setupCounters() {
+      const nodes = document.querySelectorAll(".stat-number");
+
+      // Fallback for very old browsers: animate immediately
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach(n => {
+          const t = Number(n.dataset.target || 0);
+          const s = n.dataset.suffix || "";
+          countTo(n, t, { suffix: s });
+        });
+        return;
+      }
+
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            // Ensure numeric target (no + or commas in data-target)
+            const target = Number(el.dataset.target || 0);
+            const suffix = el.dataset.suffix || "";
+            countTo(el, target, { suffix });
+            obs.unobserve(el); // run once
+          }
+        });
+      }, { threshold: 0.25 }); // fire when 25% visible
+
+      nodes.forEach(n => obs.observe(n));
+    }
+
+    // Run after DOM is ready
+    document.addEventListener("DOMContentLoaded", setupCounters);
