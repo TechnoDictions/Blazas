@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro 15",
+    "price": 1500,
+    "image": "../img/Bracelets/b1.jpg",
+    "category": "Laptops"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone X",
+    "price": 900,
+    "image": "https://i0.wp.com/www.photographingspace.com/wp-content/uploads/2019/10/2019JulyLunarEclipse-Moon0655-CorySchmitz-PI2_wm-web50pct-web-feature.jpg?w=2000&ssl=1",
+    "category": "Mobiles"
+  },
+  {
+    "id": 3,
+    "name": "Wireless Headphones",
+    "price": 120,
+    "image": "../img/Bracelets/b3.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Smartphone X",
+    "price": 900,
+    "image": "../img/Bracelets/b4.jpg",
+    "category": "Mobiles"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+    "price": 120,
+    "image": "../img/Bracelets/b6.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Beads Bracelets",
+    "price": 900,
+    "image": "../img/Bracelets/b5.jpg",
+    "category": "Mobiles"
+  },
+  {
+    "id": 7,
+    "name": "Wireless Headphones",
+    "price": 120,
+    "image": "../img/Bracelets/b7.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 8,
+    "name": "Smartphone X",
+    "price": 900,
+    "image": "../img/Bracelets/b5.jpg",
+    "category": "Mobiles"
+  },
+  {
+    "id": 9,
+    "name": "Wireless Headphones",
+    "price": 120,
+    "image": "../img/Bracelets/b7.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 10,
+    "name": "Smartphone X",
+    "price": 900,
+    "image": "../img/Bracelets/b5.jpg",
+    "category": "Mobiles"
+  },
+  {
+    "id": 11,
+    "name": "Wireless Headphones",
+    "price": 120,
+    "image": "../img/Bracelets/b7.jpg",
+    "category": "Accessories"
+  }
+  
+]
