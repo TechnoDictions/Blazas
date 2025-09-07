@@ -25,7 +25,60 @@ spacer
   // Pass it to CSS as a variable
   document.querySelector(".spacer").style.height = header_height + "px";
 
+/*
+==============
+For search
+==============
+*/
+ const searchContainer = document.querySelector(".search-container");
+    const searchBtn = document.querySelector(".search-icon");
+    const searchBox = document.querySelector(".search-box");
+    const closeBtn = document.querySelector(".close-btn");
 
+    // Open search
+   searchBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  searchContainer.classList.add("active");
+  searchBox.classList.add("active");
+  searchBox.focus();
+});
+
+    // Close search on X
+    closeBtn.addEventListener("click", () => {
+      searchBox.classList.remove("active");
+      searchContainer.classList.remove("active");
+      searchBox.value = "";
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!searchContainer.contains(event.target)) {
+        searchBox.classList.remove("active");
+        searchContainer.classList.remove("active");
+        searchBox.value = "";
+      }
+    });
+
+
+
+      const searchInput = document.querySelector(".search-input");
+  const searchBtn2 = document.querySelector(".searching");
+
+  function performSearch() {
+    const query = searchInput.value.trim();
+    if (query) {
+      window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+    }
+  }
+
+  searchBtn2.addEventListener("click", performSearch);
+
+  // Enter key
+  searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      performSearch();
+    }
+  });
 /*
 =============
 Slider script
@@ -134,6 +187,8 @@ DynamicCards2("img/Bracelets/b6.jpg" , "Bracelet beads with charms")
 DynamicCards2("img/Bracelets/b7.jpg" , "Bracelet beads with charms")
 DynamicCards2("img/Bracelets/b8.jpg" , "Bracelet beads with charms")
 
+
+
 /*
 =========================
 For scrolling of products
@@ -208,7 +263,6 @@ for Milestone
     function setupCounters() {
       const nodes = document.querySelectorAll(".stat-number");
 
-      // Fallback for very old browsers: animate immediately
       if (!("IntersectionObserver" in window)) {
         nodes.forEach(n => {
           const t = Number(n.dataset.target || 0);
@@ -222,17 +276,14 @@ for Milestone
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const el = entry.target;
-            // Ensure numeric target (no + or commas in data-target)
             const target = Number(el.dataset.target || 0);
             const suffix = el.dataset.suffix || "";
             countTo(el, target, { suffix });
-            obs.unobserve(el); // run once
+            obs.unobserve(el); 
           }
         });
-      }, { threshold: 0.25 }); // fire when 25% visible
+      }, { threshold: 0.5 }); 
 
       nodes.forEach(n => obs.observe(n));
     }
-
-    // Run after DOM is ready
     document.addEventListener("DOMContentLoaded", setupCounters);
