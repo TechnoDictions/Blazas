@@ -100,7 +100,8 @@ ROOT
 }
 
 .menu-btn.active .span2 {
-  height: 0.01px;
+  height: 0.05px;
+  opacity: 0;
   transition: all .3s ease;
 }
 
@@ -244,7 +245,7 @@ nav ul li:hover ul li:nth-child(7) {
   justify-content: center;
   gap: 20px;
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(15%);
   font-size: 30px;
   border-top: 2px solid rgba(191, 191, 191, 0.673);
   transition: all 1s ease;
@@ -257,11 +258,14 @@ nav ul li:hover ul li:nth-child(7) {
   width: 70vw;
   padding: 10px 10px;
   font-size: 16px;
-  border-radius: 5px;
+  border: none;
   outline: none;
   transition: all 0.3s ease;
 }
-
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
 .search-box input:focus{
 }
 
@@ -276,7 +280,7 @@ Nav sidebar
 ===========
 */
 .menu-sidebar {
-  position: absolute;
+  position: fixed;
   left: -102%;
   z-index: 1000;
   height: 100vh;
@@ -478,7 +482,6 @@ Mian
   position: relative;
   align-items: center;
   overflow-x: auto;
-  /* Added horizontal scrolling */
   scroll-behavior: smooth;
 }
 
@@ -510,16 +513,17 @@ Mian
   }
 }
 
-.cards {
+.cards{
   height: 100%;
   width: 30vw;
   flex: 0 0 auto;
-  margin: 0 10px;
+  margin: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .products-container::-webkit-scrollbar {
@@ -534,8 +538,11 @@ Mian
   border-radius: 3px;
   object-position: center center;
   animation: fadeIn .5s ease-in-out forwards;
+  transition: all 1s ease;
 }
-
+.cards img:hover{
+ transform: scale(1.12);
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -575,7 +582,7 @@ Mian
   right: 20px;
 }
 
-.btn-cards:hover {
+.btn-cards:hover{
   background-color: rgba(0, 0, 0, 0.703);
   transform: scale(1.2) translateY(-40%);
 }
@@ -822,12 +829,17 @@ Category
   justify-content: center;
 }
 
+
 .product-category-img {
   height: 12vw;
   width: 12vw;
   overflow: hidden;
   border-radius: 50%;
+  transition: all .5s ease;
 
+}
+.product-category-img:hover{
+  transform: translateY(-10px);
 }
 
 .product-category-name p {
@@ -1380,4 +1392,3 @@ Media Screen
     width: 24vw;
   }
 }
-
