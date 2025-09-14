@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Alishan551797/css-cdn-links@main/css/all.css">
 </head>
 <style>
@@ -495,6 +496,27 @@ for side
       </div>
     </div>
   </section>
+  <section class="footer-section">
+    
+  </section>
+   <script>
+    async function loadfooter() {
+      try {
+        const res = await fetch('footer.txt'); 
+        if (!res.ok) throw new Error('header fetch failed: ' + res.status);
+        const html = await res.text();
+
+        const headerEl = document.querySelector('.footer-section');
+        headerEl.innerHTML = html;
+
+       
+
+      } catch (err) {
+        console.error('Error loading header:', err);
+      }
+    }
+    loadfooter();
+  </script>
   <script src="script.js"></script>
   <script>
      
