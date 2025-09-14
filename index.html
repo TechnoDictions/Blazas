@@ -27,71 +27,103 @@
 </head>
 
 <body>
-  <header class="header">
+  <section class="header-section">
+    <header class="header">
 
-    <div class="logo-section">
-      <div class="menu-btn">
-        <span class="span1"></span>
-        <span class="span2"></span>
-        <span class="span3"></span>
-      </div>
-      <div class="logo"><a href="https://www.blazas.com"><img src="img/logo.svg" alt="Blazas Logo" srcset=""></a></div>
-      <div class="icons">
-        <div class="icon-set icon-set1 login-icon">
-          <a href="login.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
-              <path
-                d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
-            </svg>
-          </a>
+      <div class="logo-section">
+        <div class="menu-btn">
+          <span class="span1"></span>
+          <span class="span2"></span>
+          <span class="span3"></span>
         </div>
-        <div class="icon-set icon-set2 search-icon">
-          
+        <div class="logo"><a href="https://www.blazas.com"><img src="img/logo.svg" alt="Blazas Logo" srcset=""></a>
+        </div>
+        <div class="icons">
+          <div class="icon-set icon-set1 login-icon">
+            <a href="login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
+                <path
+                  d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+              </svg>
+            </a>
+          </div>
+          <div class="icon-set icon-set2 search-icon">
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
               <path
                 d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
             </svg>
-      
+
+          </div>
+          <div class="icon-set icon-set3 cart-icon">
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
+                <path
+                  d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="icon-set icon-set3 cart-icon">
+      </div>
+      <nav>
+        <ul class="flex align-center justify-center">
+          <li class="nav-links"><a href="https://www.blazas.com">Home</a></li>
+          <li class="nav-links"><a href="blogs.html">Blogs</a></li>
+          <li class="nav-links"><a href="shop.html">Shop</a></li>
+          <li class="nav-links"><a href="contact.html">Contact us</a></li>
+          <li class="nav-links"><a href="products.html">Products</a>
+            <ul class="ul2">
+              <li><a href="products.html?search=Laptops">Laptops</a></li>
+              <li><a href="products.html?search=Mobile">Mobile</a></li>
+              <li><a href="products.html?search=fashion">Fashion</a></li>
+              <li><a href="products.html?search=electric">Electric</a></li>
+              <li><a href="products.html?search=bracelets">Bracelets</a></li>
+            </ul>
+          </li>
+          <li class="nav-links"><a href="">Category</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass searching"></i><input type="search"
+            class="search-input" placeholder="Search..."><i class="fa-solid fa-xmark close-btn"></i></div>
+      </div>
+    </header>
+
+    <div class="menu-sidebar">
+      <div class="sidebar-container">
+        <div class="sidebar-links">
+          <ul>
+            <li>
+              <a href="https://www.blazas.com">
+                <i class="fa-solid fa-house"></i><p>Home</p>
+              </a>
+            </li>
+              <li>
+              <a href="products.html">
+                <i class="material-icons">widgets</i><p>Products</p>
+              </a>
+            </li>
+              <li>
+              <a href="contact.html">
+                <i class="material-icons">contact_page</i><p>Contact Us</p>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="sidebar-login">
           <a href="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor">
-              <path
-                d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-            </svg>
+            <i class="material-icons">account_circle</i><p>Login</p>
           </a>
         </div>
       </div>
     </div>
-    <nav>
-      <ul class="flex align-center justify-center">
-        <li class="nav-links"><a href="">Home</a></li>
-        <li class="nav-links"><a href="">Blogs</a></li>
-        <li class="nav-links"><a href="">Shop</a></li>
-        <li class="nav-links"><a href="">Contact us</a></li>
-        <li class="nav-links"><a href="products.html">Products</a>
-          <ul class="ul2">
-            <li><a href="https://www.blazas.com">Laptops</a></li>
-            <li><a href="">Mobile</a></li>
-            <li><a href="">Fashion</a></li>
-            <li><a href="">Bracelets</a></li>
-          </ul>
-        </li>
-        <li class="nav-links"><a href="">Category</a></li>
-      </ul>
-    </nav>
-    <div class="search-container">
-      <div class="search-box"><i class="fa-solid fa-magnifying-glass searching"></i><input type="search" class="search-input"
-          placeholder="Search..."><i class="fa-solid fa-xmark close-btn"></i></div>
-    </div>
-  </header>
-
-  <div class="menu-sidebar">
-
-  </div>
 
 
-  <div class="spacer"></div>
+    <div class="spacer"></div>
+
+  </section>
+
   <!--
   ======
   Main
@@ -248,61 +280,65 @@
     <div class="category-parent">
       <div class="category">
         <div class="product-category category1" data-aos="fade-up" data-aos-duration="600">
-          <Div class="product-category-img"><img src="img/Bracelets/b1.jpg" alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=bracelet"><img src="img/Bracelets/b1.jpg"
+                alt=""></a></Div>
           <Div class="product-category-name">
             <p>Bracelets</p>
           </Div>
         </div>
         <div class="product-category category2" data-aos="fade-up" data-aos-duration="700">
-          <Div class="product-category-img"><img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJKY2NbGjzziL70leez1dNta2kAAd1woWJfg&s" alt="">
+          <Div class="product-category-img"><a href="products.html?search=Mobile"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJKY2NbGjzziL70leez1dNta2kAAd1woWJfg&s"
+                alt=""></a>
           </Div>
           <Div class="product-category-name">
             <p>Mobile</p>
           </Div>
         </div>
         <div class="product-category category3" data-aos="fade-up" data-aos-duration="800">
-          <Div class="product-category-img"><img
-              src="https://myshop.pk/pub/media/catalog/product/cache/26f8091d81cea4b38d820a1d1a4f62be/p/l/platinum2-myshop-pk-16_1.jpg"
-              alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=Laptops"><img
+                src="https://myshop.pk/pub/media/catalog/product/cache/26f8091d81cea4b38d820a1d1a4f62be/p/l/platinum2-myshop-pk-16_1.jpg"
+                alt=""></a></Div>
           <Div class="product-category-name">
             <p>Laptops</p>
           </Div>
         </div>
         <div class="product-category category4" data-aos="fade-up" data-aos-duration="900">
-          <Div class="product-category-img"><img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTDd5G0K_Mm9jJ_X15W0VBakiYgrZvswHWXA&s" alt="">
+          <Div class="product-category-img"><a href="products.html?search=jewlery"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTDd5G0K_Mm9jJ_X15W0VBakiYgrZvswHWXA&s"
+                alt=""></a>
           </Div>
           <Div class="product-category-name">
             <p>jewlery</p>
           </Div>
         </div>
         <div class="product-category category5" data-aos="fade-up">
-          <Div class="product-category-img"><img src="https://www.insulaworks.gr/wp-content/uploads/2020/11/eleq.png"
-              alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=Electric"><img
+                src="https://www.insulaworks.gr/wp-content/uploads/2020/11/eleq.png" alt=""></a></Div>
           <Div class="product-category-name">
             <p>Electrical Equipments</p>
           </Div>
         </div>
         <div class="product-category category6" data-aos="fade-up" data-aos-duration="1050">
-          <Div class="product-category-img"><img
-              src="https://www.lindablackbournjewelry.com/cdn/shop/files/il_fullxfull.5563632965_god9_b1928371-c15d-40e1-8bd4-8e92d294a36d_240x.jpg?v=1753303968"
-              alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=necklace"><img
+                src="https://www.lindablackbournjewelry.com/cdn/shop/files/il_fullxfull.5563632965_god9_b1928371-c15d-40e1-8bd4-8e92d294a36d_240x.jpg?v=1753303968"
+                alt=""></a></Div>
           <Div class="product-category-name">
             <p>Necklace</p>
           </Div>
         </div>
         <div class="product-category category7" data-aos="fade-up" data-aos-duration="1100">
-          <Div class="product-category-img"><img
-              src="https://flyingmag1.b-cdn.net/wp-content/uploads/sites/2/2024/12/travel-drones.jpg" alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=drone"><img
+                src="https://flyingmag1.b-cdn.net/wp-content/uploads/sites/2/2024/12/travel-drones.jpg" alt=""></a>
+          </Div>
           <Div class="product-category-name">
             <p>Drone</p>
           </Div>
         </div>
         <div class="product-category category8" data-aos="fade-up" data-aos-duration="1150">
-          <Div class="product-category-img"><img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkz7sxs_ewSe3mIb2ugNCpbWVKE8CNm9OAzQpyJHIcbLB6jBS8CfIHNFa9nipto-1YtU&usqp=CAU"
-              alt=""></Div>
+          <Div class="product-category-img"><a href="products.html?search=in"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkz7sxs_ewSe3mIb2ugNCpbWVKE8CNm9OAzQpyJHIcbLB6jBS8CfIHNFa9nipto-1YtU&usqp=CAU"
+                alt=""></a></Div>
           <Div class="product-category-name">
             <p>Cars</p>
           </Div>
@@ -423,65 +459,63 @@
   Footer
   =========
   -->
-  <section class="footer">
-    <footer>
-      <div class="footer-div">
-        <div class="footer-section footer-section1">
-          <div class="wp-chat">
-            <h2>Want To Chat on Whatsapp</h2>
-            <p>If you are interested in asking some Question</p>
-            <a href="https://wa.me/923045811000"><button>
-                <span> Lets Chat </span>
-              </button>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-section footer-section2">
-          <div class="footer-links">
-            <h3>PARTNERSHIP</h3>
-            <ul>
-              <li><a href="">Website</a></li>
-              <li><a href="">Social Media</a></li>
-              <li><a href="">Branding</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h3>ABOUT</h3>
-            <ul>
-              <li><a href="">Our Companies</a></li>
-              <li><a href="">Our Blogs</a></li>
-              <li><a href="">Our Shop</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h3>SUPPORT</h3>
-            <ul>
-              <li><a href="">Whatsapp</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Chat</a></li>
-            </ul>
-          </div>
-
-
-          <div class="footer-links follow-us">
-            <h3>FOLLOW US</h3>
-            <ul>
-              <li><a href=""><i class="fa-brands fa-whatsapp wp"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-youtube yt"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-instagram insta"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-x-twitter x"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-section footer-section3">
-          <div class="copyright">© Copyright 2025 Blazas | All right reserved</div>
+  <footer>
+    <div class="footer-div">
+      <div class="footer-section footer-section1">
+        <div class="wp-chat">
+          <h2>Want To Chat on Whatsapp</h2>
+          <p>If you are interested in asking some Question</p>
+          <a href="https://wa.me/923045811000"><button>
+              <span> Lets Chat </span>
+            </button>
+          </a>
         </div>
       </div>
 
-    </footer>
-  </section>
+      <div class="footer-section footer-section2">
+        <div class="footer-links">
+          <h3>PARTNERSHIP</h3>
+          <ul>
+            <li><a href="">Website</a></li>
+            <li><a href="">Social Media</a></li>
+            <li><a href="">Branding</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="">Our Companies</a></li>
+            <li><a href="">Our Blogs</a></li>
+            <li><a href="">Our Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><a href="">Whatsapp</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Chat</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-links follow-us">
+          <h3>FOLLOW US</h3>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-whatsapp wp"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-youtube yt"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram insta"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-x-twitter x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-section footer-section3">
+        <div class="copyright">© Copyright 2025 Blazas | All right reserved</div>
+      </div>
+    </div>
+
+  </footer>
   <script src="script.js"> </script>
   <script src="assets/aos.js"></script>
   <script>
