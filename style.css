@@ -284,7 +284,7 @@ Nav sidebar
   left: -102%;
   z-index: 1000;
   height: 100vh;
-  width: 70vw;
+  width: 60vw;
   visibility: hidden;
   background-color: white;
   transition: all .6s ease;
@@ -293,6 +293,55 @@ Nav sidebar
 .menu-sidebar.active {
   left: 0;
 }
+.sidebar-container{
+  height: 92%;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  
+}
+.sidebar-links{
+  width: 90%;
+  margin: 30px auto;
+  margin-top: 40px;
+}
+.sidebar-login{
+  width: 90%;
+  margin: 10px auto;
+}
+.sidebar-links ul li{
+  margin: 10px 0;
+}
+.sidebar-links ul li a{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  gap: 20px;
+  text-decoration: none;
+  color: #484848;
+}
+.sidebar-links ul li a:hover{
+  color: #008cff;
+}
+.sidebar-links ul li i{
+  font-size: 30px;
+}
+.sidebar-links ul li:hover{
+  background-color: #f1f1f1;
+}
+.sidebar-login a{
+display: flex;
+font-size: 25px;
+align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: #333;
+}
+.sidebar-login i{
+  font-size: 40px;
+}
 
 /*
 ==========
@@ -300,14 +349,13 @@ Nav media
 ==========
 */
 
-
-
-
 @media(max-width:720px) {
   .menu-btn {
     display: block;
   }
-
+ .icon-set1{
+  display: none;
+ }
   .menu-sidebar {
     visibility: visible;
   }
@@ -325,13 +373,6 @@ Nav media
   .logo img {
     height: 40px;
   }
-
-  .menu-btn span {}
-
-  .icon-set1 {
-    display: none;
-  }
-
   .icon-set svg {
     height: 26px;
   }
@@ -515,7 +556,7 @@ Mian
 
 .cards{
   height: 100%;
-  width: 30vw;
+  width: 27vw;
   flex: 0 0 auto;
   margin: 0 15px;
   display: flex;
@@ -1078,10 +1119,13 @@ Contact-info
 .contacts i {
   padding: 10px 10px;
   font-size: 33px;
-  color: #2e8eff;
+  color: #1683ff;
   text-align: center;
+  transition: all .3s ease-in-out;
 }
-
+.contacts i:hover {
+  color: #0051ad;
+}
 .contact-links {
   font-size: 30px;
   display: flex;
@@ -1102,6 +1146,15 @@ footer {
   box-shadow: 0 0 15px rgb(113, 113, 113);
   margin-top: 40px;
   color: rgb(255, 255, 255);
+  margin-bottom: 0;
+  bottom: 0;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+ul{
+  list-style: none;
 }
 
 footer h3 {
@@ -1152,6 +1205,7 @@ footer h3 {
   position: relative;
   display: block;
   border-radius: 10px;
+  background-color: rgba(124, 124, 124, 0);
   border: 3px solid var(--button-color2);
   color: var(--button-color2);
   transition: all .5s ease-in-out;
@@ -1215,6 +1269,7 @@ footer h3 {
   display: flex;
   font-size: 26px;
   gap: 20px;
+  list-style: none;
 }
 
 .follow-us i {
