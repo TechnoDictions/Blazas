@@ -1,4 +1,4 @@
-<header class="header">
+ <header class="header">
 
     <div class="logo-section">
       <div class="menu-btn">
@@ -36,16 +36,17 @@
     </div>
     <nav>
       <ul class="flex align-center justify-center">
-        <li class="nav-links"><a href="">Home</a></li>
-        <li class="nav-links"><a href="">Blogs</a></li>
-        <li class="nav-links"><a href="">Shop</a></li>
-        <li class="nav-links"><a href="">Contact us</a></li>
+        <li class="nav-links"><a href="https://www.blazas.com">Home</a></li>
+        <li class="nav-links"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-links"><a href="shop.html">Shop</a></li>
+        <li class="nav-links"><a href="contact.html">Contact us</a></li>
         <li class="nav-links"><a href="products.html">Products</a>
           <ul class="ul2">
-            <li><a href="https://www.blazas.com">Laptops</a></li>
-            <li><a href="">Mobile</a></li>
-            <li><a href="">Fashion</a></li>
-            <li><a href="">Bracelets</a></li>
+            <li><a href="products.html?search=Laptops">Laptops</a></li>
+            <li><a href="products.html?search=Mobile">Mobile</a></li>
+            <li><a href="products.html?search=fashion">Fashion</a></li>
+            <li><a href="products.html?search=electric">Electric</a></li>
+            <li><a href="products.html?search=bracelets">Bracelets</a></li>
           </ul>
         </li>
         <li class="nav-links"><a href="">Category</a></li>
@@ -55,12 +56,38 @@
       <div class="search-box"><i class="fa-solid fa-magnifying-glass searching"></i><input type="search" class="search-input"
           placeholder="Search..."><i class="fa-solid fa-xmark close-btn"></i></div>
     </div>
-    
-
   </header>
-  <div class="menu-sidebar">
 
-  </div>
+ 
+    <div class="menu-sidebar">
+      <div class="sidebar-container">
+        <div class="sidebar-links">
+          <ul>
+            <li>
+              <a href="https://www.blazas.com">
+                <i class="fa-solid fa-house"></i><p>Home</p>
+              </a>
+            </li>
+              <li>
+              <a href="products.html">
+                <i class="material-icons">widgets</i><p>Products</p>
+              </a>
+            </li>
+              <li>
+              <a href="contact.html">
+                <i class="material-icons">contact_page</i><p>Contact Us</p>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="sidebar-login">
+          <a href="">
+            <i class="material-icons">account_circle</i><p>Login</p>
+          </a>
+        </div>
+      </div>
+    </div>
 
 
   <div class="spacer"></div>
